@@ -19,6 +19,7 @@ export const TeamContainer = styled("div")`
 
 export const Slide = styled("div")`
     margin-right: 40px;
+    outline: none;
 `
 
 export const Img = styled(Image)`

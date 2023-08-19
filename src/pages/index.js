@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Container from '@/components/Container'
 import AboutUs from '@/components/AboutUs'
 import WhyUs from '@/components/WhyUs'
@@ -7,7 +6,8 @@ import Team from '@/components/Team'
 import Message from '@/components/Message'
 import Social from '@/components/Social'
 import Footer from '@/components/Footer'
-
+import HorizontalContent from '@/components/HorizontalContent'
+import OurVision from '@/components/OurVision'
 
 export default function Home() {
   return (
@@ -21,6 +21,8 @@ export default function Home() {
       <Container>
         <AboutUs />
         <WhyUs />
+        <OurVision />
+        <HorizontalContent />
         <Team />
         <Message />
         <Social />
