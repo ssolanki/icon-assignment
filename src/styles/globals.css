@@ -87,12 +87,8 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #000000;
+  font-family: Helvetica Neue, Arial, sans-serif;
 }
 
 a {
@@ -104,4 +100,9 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+a {
+  text-decoration: none;
 }
