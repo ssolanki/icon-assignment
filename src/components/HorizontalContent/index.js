@@ -14,6 +14,10 @@ function HorizontalContent() {
     function onScroll() {
         const rect = innerRef.current.getBoundingClientRect()
         const yPosition = rect.y
+        // optimisation
+        if (yPosition > window.innerHeight || (- yPosition) > rect.height) {
+            return
+        }
         const ratio = window.innerWidth/window.innerHeight
         const left = window.innerWidth - (yPosition) * ratio
         setLeft(2 * left)

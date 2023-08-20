@@ -23,11 +23,15 @@ function OurVision() {
         const rect = innerRef.current.getBoundingClientRect()
         const yPosition = rect.y
         const bgHeight = bgRef.current.offsetHeight
+
+        // optimisation
+        if (yPosition > window.innerHeight || (- yPosition) > rect.height) {
+            return
+        }
         const triggerPoint = window.innerHeight/2 - bgHeight/2
         setIsFixed(yPosition < triggerPoint && yPosition < 0)
         setIsContainerScrolled(window.innerHeight/2 - rect.height > yPosition)
     }
-
     return (
         <Section ref={innerRef}>
             <Heading ref={bgRef} isFixed={isFixed && !isContainerScrolled}>Our Vision</Heading>
