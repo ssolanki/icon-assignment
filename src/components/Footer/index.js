@@ -6,9 +6,9 @@ import FadeInSection from "../FadeInSection"
 function Footer() {
     
     return (
-        <FadeInSection>
-            <Section>
-                <TopContainer>
+        <Section>
+            <TopContainer>
+                <FadeInSection>
                     <Container>
                         <Logo src={footerLogo} alt="logo" />
                         <InputContainer>
@@ -19,6 +19,8 @@ function Footer() {
                             </InputWrapper>
                         </InputContainer>
                     </Container>
+                </FadeInSection>
+                <FadeInSection>
                     <Container style={{justifyContent: "space-between"}}>
                         <LinkSection>
                             <LinkSectionTitle> Quick Links </LinkSectionTitle>
@@ -62,21 +64,21 @@ function Footer() {
                             </LinksWrap>
                         </LinkSection>
                     </Container>
-                </TopContainer>
-                <BottomContainer>
-                    <Container>
-                        <Rightstext>
-                            All right Reserverd. Rotana Media Services
-                        </Rightstext>
-                        <BottomLinkContainer>
+                </FadeInSection>
+            </TopContainer>
+            <BottomContainer>
+                <Container>
+                    <Rightstext>
+                        All right Reserverd. Rotana Media Services
+                    </Rightstext>
+                    <BottomLinkContainer>
 
-                            <BottomLink href="#">Privacy Policy </BottomLink>
-                            <BottomLink href="#">Terms & Conditions</BottomLink>
-                        </BottomLinkContainer>
-                    </Container>
-                </BottomContainer>
-            </Section>
-        </FadeInSection>
+                        <BottomLink href="#">Privacy Policy </BottomLink>
+                        <BottomLink href="#">Terms & Conditions</BottomLink>
+                    </BottomLinkContainer>
+                </Container>
+            </BottomContainer>
+        </Section>
     )
 }
 
