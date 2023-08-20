@@ -5,11 +5,17 @@ export const Section = styled("div")`
     padding: 219px 0px;
     display: flex;
     justify-content: center;
+    @media (max-width: 1024px) {
+        padding: 80px 16px;
+    }
 `
 
 export const Container = styled("div")`
     position: relative;
     left: -24px;
+    @media (max-width: 1024px) {
+        left: 0px;
+    }
 `
 
 
@@ -20,6 +26,10 @@ export const Heading = styled("p")`
     line-height: .94;
     letter-spacing: -1.08px;
     margin-bottom: 62px;
+    @media (max-width: 1024px) {
+        font-size: 18px;
+        margin-bottom: 32px;
+    }
 `
 
 export const Info = styled("p")`
@@ -30,6 +40,11 @@ export const Info = styled("p")`
     letter-spacing: -1.89px;
     margin-bottom: 48px;
     max-width: 777px;
+    @media (max-width: 1024px) {
+        font-size: 28px;
+        width: 100%;
+        letter-spacing: -1px;
+    }
 `
 
 export const BottomSection = styled("div")`

@@ -3,15 +3,22 @@ import Image from 'next/image'
 
 export const Section = styled("div")`
     padding: 0px 48px;
+    @media (max-width: 1024px) {
+        padding: 0px 16px;
+    }
 `
 
 export const TopSection = styled("div")`
     padding: 171px 0px;
+    @media (max-width: 1024px) {
+        padding: 32px 0px 48px;
+    }
 `
 
 export const BannerImg = styled(Image)`
     width: 100%;
     border-radius: 24px;
+    height: auto;
 `
 
 export const BottomSection = styled("div")`
@@ -26,6 +33,11 @@ export const Heading = styled("p")`
     font-size: 97px;
     margin-bottom: 46px;
     color: #fff;
+    @media (max-width: 1024px) {
+        padding: 0px 32px;
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
 `
 
 export const Summary = styled("div")`
@@ -35,6 +47,10 @@ export const Summary = styled("div")`
     margin-bottom: 48px;
     position: relative;
     left: -44px;
+    @media (max-width: 1024px) {
+        max-width: auto;
+        left: 0px;
+    }
 `
 
 export const Text = styled("span")`
@@ -43,6 +59,10 @@ export const Text = styled("span")`
     color: #EFEFEF;
     line-height: .95;
     letter-spacing: -2.43px;
+    @media (max-width: 1024px) {
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
 `
 
 export const HighlightText = styled("span")`
@@ -51,6 +71,10 @@ export const HighlightText = styled("span")`
     color: #1CB647;
     line-height: .95;
     letter-spacing: -2.43px;
+    @media (max-width: 1024px) {
+        font-size: 24px;
+        letter-spacing: -1px;
+    }
 `
 
 
@@ -63,5 +87,9 @@ export const Description = styled("p")`
     margin-bottom: 24px;
     position: relative;
     left: 260px;
-
+    @media (max-width: 1024px) {
+        left: 0px;
+        max-width: auto;
+        padding-right: 16px;
+    }
 `

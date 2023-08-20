@@ -3,6 +3,9 @@ import Image from 'next/image'
 
 export const Section = styled("div")`
     padding: 0px 0px 0px 201px;
+    @media (max-width: 1024px) {
+        padding: 0px 16px;
+    }
 `
 
 export const Heading = styled("p")`
@@ -12,9 +15,15 @@ export const Heading = styled("p")`
     line-height: 1.08;
     letter-spacing: -2.7px;
     margin-bottom: 64px;
+    @media (max-width: 1024px) {
+        font-size: 32px;
+        letter-spacing: -1px;
+        margin-bottom: 32px;
+    }
 `
 
 export const TeamContainer = styled("div")`
+
 `
 
 export const Slide = styled("div")`
@@ -27,6 +36,10 @@ export const Img = styled(Image)`
     margin-bottom: 24px;
     height: 454px;
     border-radius: 20px;
+    @media (max-width: 1024px) {
+        max-width: 100%;
+        height: auto;
+    }
 `
 
 export const Name = styled("p")`

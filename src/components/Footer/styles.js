@@ -7,11 +7,9 @@ export const Section = styled("div")`
 
 export const Heading = styled("p")`
     color: #FFF;
-    font-family: Helvetica Neue;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 133.6%; /* 21.376px */
+    line-height: 133.6%;
     letter-spacing: -0.32px;
 `
 
@@ -19,12 +17,19 @@ export const Heading = styled("p")`
 export const TopContainer = styled("div")`
     padding: 110px 0px 64px;
     margin: 0 auto;
+    @media (max-width: 1024px) {
+        padding: 48px 0px 16px;
+    }
 `
 
 export const Container = styled("div")`
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        padding: 0px 16px;
+    }
 `
 
 export const InputContainer = styled("div")`
@@ -58,6 +63,12 @@ export const Input = styled("input")`
         line-height: .95;
         letter-spacing: -1.08px;
     }
+    @media (max-width: 1024px) {
+        font-size: 20px;
+        &::placeholder {
+            font-size: 20px;
+        }
+    }
 `
 
 export const InputWrapper = styled("div")`
@@ -71,6 +82,10 @@ export const InputIcon = styled(Image)`
     position: absolute;
     right: 0px;
     cursor: pointer;
+    @media (max-width: 1024px) {
+        width: 24px;
+        height: 24px;
+    }
 `
 
 export const ImgContainer = styled("div")`
@@ -101,6 +116,9 @@ export const LinkSectionTitle = styled("p")`
     line-height: .95;
     letter-spacing: -0.4px;
     margin-bottom: 43px;
+    @media (max-width: 1024px) {
+        margin-bottom: 24px;
+    }
 `
 
 export const Link = styled("a")`
@@ -116,12 +134,14 @@ export const Link = styled("a")`
 
 export const LinkSection = styled("div")`
     margin-top: 105px;
-
     &:last-of-type {
         padding-right: 0px;
         ${LinkSectionTitle}, ${Link}: {
             text-align: right;
         }
+    }
+    @media (max-width: 1024px) {
+        margin-top: 48px;
     }
 `
 
@@ -129,6 +149,9 @@ export const LinkSection = styled("div")`
 export const BottomContainer = styled("div")`
     border-top: 1px solid #CECECE;
     padding: 16px 0px 78px;
+    @media (max-width: 1024px) {
+        padding: 16px 0px 24px;
+    }
 
 `
 
@@ -144,6 +167,9 @@ const bottomText = css`
 export const Rightstext = styled("p")`
     ${bottomText};
     flex: 1;
+    @media (max-width: 1024px) {
+        margin-bottom: 8px;
+    }
 `
 
 

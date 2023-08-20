@@ -6,11 +6,9 @@ export const Section = styled("div")`
 
 export const Heading = styled("p")`
     color: #FFF;
-    font-family: Helvetica Neue;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: 133.6%; /* 21.376px */
+    line-height: 133.6%;
     letter-spacing: -0.32px;
 `
 
@@ -19,6 +17,9 @@ export const TopContainer = styled("div")`
     padding: 0px 199px 27px;
     display: flex;
     align-items: center;
+    @media (max-width: 1024px) {
+        padding: 0px 32px 16px;
+    }
 `
 
 export const Container = styled("div")`

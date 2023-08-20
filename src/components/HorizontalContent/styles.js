@@ -1,11 +1,13 @@
 import { styled } from "styled-components";
-import Image from 'next/image'
 
 export const Section = styled("div")`
     position: relative;
     overflow: hidden;
     max-width: 100vw;
     padding-bottom: 320px;
+    @media (max-width: 1024px) {
+        padding-bottom: 180px;
+    }
 `
 
 export const Heading = styled("div")`
@@ -19,5 +21,9 @@ export const Heading = styled("div")`
     width: 200vw;
     flex-wrap: nowrap;
     margin-left: 100vw;
+    @media (max-width: 1024px) {
+        font-size: 64px;
+        letter-spacing: -2px;
+    }
 `
 

@@ -4,6 +4,9 @@ import Image from 'next/image'
 export const Section = styled("div")`
     padding: 205px 152px 231px 90px;
     position: relative;
+    @media (max-width: 1024px) {
+        padding: 60px 20px 60px 20px;
+    }
 `
 
 export const Heading = styled("p")`
@@ -22,6 +25,16 @@ export const Heading = styled("p")`
     ${({ isFixed }) => isFixed && css`
         position: fixed;
     `}
+    @media (max-width: 1024px) {
+        font-size: 64px;
+        letter-spacing: -2px;
+        top: calc(50vh - 34px);
+        text-align: center;
+        left: 0;
+        transform: translateX(-50%);
+        left: 50%;
+        width: 100%;
+    }
 `
 
 export const CardsContainer = styled("div")`
@@ -29,6 +42,10 @@ export const CardsContainer = styled("div")`
     position: relative;
     justify-content: space-between;
     align-items: flex-start;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `
 
 export const LeftImg = styled(Image)`
@@ -37,6 +54,11 @@ export const LeftImg = styled(Image)`
     border-radius: 24px;
     z-index: 0;
     margin-top: 50vh;
+    height: auto;
+    max-width: 100%;
+    @media (max-width: 1024px) {
+        margin-top: 80vh;
+    }
 `
 
 export const RightImg = styled(Image)`
@@ -45,6 +67,11 @@ export const RightImg = styled(Image)`
     margin-top: calc(50vh + 168px);
     border-radius: 24px;
     z-index: 0;
+    height: auto;
+    max-width: 100%;
+    @media (max-width: 1024px) {
+        margin-top: 0px;
+    }
 `
 
 export const CenterImg = styled("div")`
@@ -55,6 +82,11 @@ export const CenterImg = styled("div")`
     margin: 0px 97px 0px 139px;
     margin-top: calc(50vh + 380px);
     z-index: 2;
+    @media (max-width: 1024px) {
+        margin-top: 0px;
+        padding: 32px 20px;
+        margin: 40px 0px;
+    }
 `
 
 export const Content = styled("p")`
@@ -63,4 +95,7 @@ export const Content = styled("p")`
     font-weight: 700;
     line-height: 1.13
     letter-spacing: -1.28px;
+    @media (max-width: 1024px) {
+        font-size: 20px;
+    }
 `

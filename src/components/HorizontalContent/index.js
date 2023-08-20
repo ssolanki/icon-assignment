@@ -20,7 +20,7 @@ function HorizontalContent() {
         }
         const ratio = window.innerWidth/window.innerHeight
         const left = window.innerWidth - (yPosition) * ratio
-        setLeft(2 * left)
+        setLeft(2.5 * left)
     }
     return (
         <Section ref={innerRef}>
