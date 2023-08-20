@@ -29,6 +29,10 @@ export const TeamContainer = styled("div")`
 export const Slide = styled("div")`
     margin-right: 40px;
     outline: none;
+    @media (max-width: 1024px) {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 `
 
 export const Img = styled(Image)`
