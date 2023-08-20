@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const Section = styled("div")`
     padding: 40px 201px 309px 201px;
     @media (max-width: 1024px) {
-        padding: 16px 16px 120px 16px;
+        padding: 16px 16px 180px 16px;
     }
 `
 
