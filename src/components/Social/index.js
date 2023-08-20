@@ -7,33 +7,35 @@ import footerImg4 from '@/images/footer-img-4.png'
 import footerImg5 from '@/images/footer-img-5.png'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import FadeInSection from "../FadeInSection"
 
 function Social() {
-    
     return (
-        <Section>
-            <TopContainer>
-                <SocialImg src={instaLogo} alt="insta" />
-                <Heading>@rotanamedia</Heading>
-            </TopContainer>
-            <Container>
-                <ImgContainer>
-                    <Img src={footerImg1} ></Img>
-                </ImgContainer>
-                <ImgContainer>
-                    <Img src={footerImg2} ></Img>
-                </ImgContainer>
-                <ImgContainer>
-                    <Img src={footerImg3} ></Img>
-                </ImgContainer>
-                <ImgContainer>
-                    <Img src={footerImg4} ></Img>
-                </ImgContainer>
-                <ImgContainer>
-                    <Img src={footerImg5} ></Img>
-                </ImgContainer>
-            </Container>
-        </Section>
+        <FadeInSection>
+            <Section>
+                <TopContainer>
+                    <SocialImg src={instaLogo} alt="insta" />
+                    <Heading>@rotanamedia</Heading>
+                </TopContainer>
+                <Container>
+                    <ImgContainer>
+                        <Img src={footerImg1} ></Img>
+                    </ImgContainer>
+                    <ImgContainer>
+                        <Img src={footerImg2} ></Img>
+                    </ImgContainer>
+                    <ImgContainer>
+                        <Img src={footerImg3} ></Img>
+                    </ImgContainer>
+                    <ImgContainer>
+                        <Img src={footerImg4} ></Img>
+                    </ImgContainer>
+                    <ImgContainer>
+                        <Img src={footerImg5} ></Img>
+                    </ImgContainer>
+                </Container>
+            </Section>
+        </FadeInSection>
     )
 }
 
