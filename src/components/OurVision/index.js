@@ -6,19 +6,31 @@ import useIntersection from './useIntersection'
 
 function OurVision() {
     const [isFixed, setIsFixed] = useState(false)
+    const [isContainerScrolled, setIsContainerScrolled] = useState(false)
     const innerRef = useRef(null)
     const bgRef = useRef(null)
-    const scrollY = typeof window !== "undefined" ? window?.scrollY: 0
-
-    const inViewport = useIntersection(innerRef, typeof window !== "undefined" ? `-${window?.innerHeight/2}px`: '0px'); // Trigger as soon as the element becomes visible
+    const inViewport = useIntersection(innerRef, '0px'); // Trigger as soon as the element becomes visible
     console.log(inViewport)
-    useEffect(() => {
 
-    }, [inViewport])
+    useEffect(() => {
+        window.addEventListener("scroll", onScroll)
+        return () => {
+            window.removeEventListener("scroll", onScroll)
+        }
+    }, [])
+
+    function onScroll() {
+        const rect = innerRef.current.getBoundingClientRect()
+        const yPosition = rect.y
+        const bgHeight = bgRef.current.offsetHeight
+        const triggerPoint = window.innerHeight/2 - bgHeight/2
+        setIsFixed(yPosition < triggerPoint && yPosition < 0)
+        setIsContainerScrolled(window.innerHeight/2 - rect.height > yPosition)
+    }
 
     return (
         <Section ref={innerRef}>
-            <Heading ref={bgRef}>Our Vision</Heading>
+            <Heading ref={bgRef} isFixed={isFixed && !isContainerScrolled}>Our Vision</Heading>
             <CardsContainer>
                 <LeftImg src={leftImg} alt="left img" />
                 <CenterImg>

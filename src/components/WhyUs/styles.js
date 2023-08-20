@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const Section = styled("div")`
-    padding: 40px 201px 40px 201px;
+    padding: 40px 201px 309px 201px;
 `
 
 export const Heading = styled("p")`

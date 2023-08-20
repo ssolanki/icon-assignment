@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 import Image from 'next/image'
 
 export const Section = styled("div")`
@@ -17,8 +17,11 @@ export const Heading = styled("p")`
     -webkit-text-fill-color: transparent;
     z-index: 1;
     position: absolute;
-    top: 413px;
+    top: calc(50vh - 115px);
     left: 20%;
+    ${({ isFixed }) => isFixed && css`
+        position: fixed;
+    `}
 `
 
 export const CardsContainer = styled("div")`
@@ -33,12 +36,13 @@ export const LeftImg = styled(Image)`
     height: 512px;
     border-radius: 24px;
     z-index: 0;
+    margin-top: 50vh;
 `
 
 export const RightImg = styled(Image)`
     width: 312px;
     height: 385px;
-    margin-top: 168px;
+    margin-top: calc(50vh + 168px);
     border-radius: 24px;
     z-index: 0;
 `
@@ -49,7 +53,7 @@ export const CenterImg = styled("div")`
     background: #000;
     padding: 75px 45px;
     margin: 0px 97px 0px 139px;
-    margin-top: 380px;
+    margin-top: calc(50vh + 380px);
     z-index: 2;
 `
 

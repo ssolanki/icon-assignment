@@ -7,13 +7,6 @@ export const Section = styled("div")`
     max-width: 100vw;
     padding-bottom: 320px;
 `
-export const Container = styled("div")`
-    width: 400%;
-    height: 100vh;
-    display: flex;
-    flex-wrap: nowrap;
-`
-
 
 export const Heading = styled("div")`
     color: #EFEFEF;

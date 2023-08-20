@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { Section, Wrapper,Container, Heading } from "./styles"
+import { Section,  Heading } from "./styles"
 
 function HorizontalContent() {
     const [left, setLeft] = useState(0)
@@ -16,7 +16,6 @@ function HorizontalContent() {
         const yPosition = rect.y
         const ratio = window.innerWidth/window.innerHeight
         const left = window.innerWidth - (yPosition) * ratio
-        console.log(left)
         setLeft(2 * left)
     }
     return (
